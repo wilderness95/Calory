@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="hu" layout:decorate="~{main}">
+<head>
+    <title></title>
+</head>
+<body>
+
+<div layout:fragment="loginContent">
+
+    <div class="container">
+
+        <div class="panel-heading">
+            <h1 class="pb-2 border-bottom row">
+                <span class="col-sm-10 pb-4">Kalória táblázat</span>
+            </h1>
+        </div>
+
+
+        </div>
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th>id</th>
+                <th>Hozzávaló neve</th>
+                <th>Energia-kj</th>
+                <th>Energia-kcal</th>
+                <th>Fehérje</th>
+                <th>zsír</th>
+                <th>szénhidrát</th>
+                <th>nátrium</th>
+                <th>kálium</th>
+                <th>kalcium</th>
+                <th>magnézoium</th>
+                <th>retinol</th>
+                <th>koleszterin</th>
+                <th>B6 vitamin</th>
+                <th>C vitamin</th>
+                <th>D vitamin</th>
+                <th>E vitamin</th>
+                <th>kategória</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="ingredient : ${ingredients}">
+
+                <td th:text="${ingredient.id}"></td>
+                <td th:text="${ingredient.ingredientsName}"></td>
+                <td th:text="${ingredient.energyInKj}"></td>
+                <td th:text="${ingredient.energyInKcal}"></td>
+                <td th:text="${ingredient.protein}"></td>
+                <td th:text="${ingredient.fat}"></td>
+                <td th:text="${ingredient.carbohydrate}"></td>
+                <td th:text="${ingredient.sodium}"></td>
+                <td th:text="${ingredient.potassium}"></td>
+                <td th:text="${ingredient.calcium}"></td>
+                <td th:text="${ingredient.magnesium}"></td>
+                <td th:text="${ingredient.retinol}"></td>
+                <td th:text="${ingredient.cholesterol}"></td>
+                <td th:text="${ingredient.vitaminB6}"></td>
+                <td th:text="${ingredient.vitaminC}"></td>
+                <td th:text="${ingredient.vitaminD}"></td>
+                <td th:text="${ingredient.vitaminE}"></td>
+                <td th:text="${ingredient.ingredientsCategory}"></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+</body>
+</html>
